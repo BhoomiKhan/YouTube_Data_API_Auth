@@ -35,7 +35,7 @@ public class YoutubeDataAuthenticationController {
 	@Path("/")
 	public String intialPage()
 	{
-		return "Welcome to Google Auth API";
+		return "Welcome to Youtube Data Auth API";
 	}
 
 	@GET

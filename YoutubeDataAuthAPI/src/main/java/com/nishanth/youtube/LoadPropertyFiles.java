@@ -16,15 +16,15 @@ import org.codehaus.jackson.map.SerializationConfig;
 
 @Provider
 public class LoadPropertyFiles implements ContextResolver<YoutubeAuthConfigPropertyFile> {
-    
-	private static YoutubeAuthConfigPropertyFile properties = null;
-    
-    public LoadPropertyFiles() {
-        super();
-        properties = new YoutubeAuthConfigPropertyFile();
 
-        Properties prop = new Properties();
-        String propFileName = "youtubeDataAuthConfig.properties";
+	private static YoutubeAuthConfigPropertyFile properties = null;
+
+	public LoadPropertyFiles() {
+		super();
+		properties = new YoutubeAuthConfigPropertyFile();
+
+		Properties prop = new Properties();
+		String propFileName = "youtubeDataAuthConfig.properties";
 
 		try {
 			InputStream inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
@@ -35,18 +35,18 @@ public class LoadPropertyFiles implements ContextResolver<YoutubeAuthConfigPrope
 				properties.setClient_secret(prop.get("youtubeDataAuthAPI.CLIENT_SECRET").toString());
 				properties.setRedirect_uri(prop.get("youtubeDataAuthAPI.REDIRECT_URI").toString());
 				properties.setRedirect_uri_access_token(prop.get("youtubeDataAuthAPI.REDIRECT_URI_FOR_ACCESS_TOKEN").toString());
-				
+
 			} else {
 				throw new FileNotFoundException("property file '" + propFileName + "' not found in the classpath");
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-    }
+	}
 
-    public static YoutubeAuthConfigPropertyFile getPropertyFile() {
-        return properties;
-    }
+	public static YoutubeAuthConfigPropertyFile getPropertyFile() {
+		return properties;
+	}
 
 	public YoutubeAuthConfigPropertyFile getContext(Class<?> arg0) {
 		return null;
