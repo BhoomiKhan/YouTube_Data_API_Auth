@@ -3,15 +3,23 @@ Initial Commit, Working copy of OAuth Implementation of Youtube Data API
 
 Important 
 
-src/main/resources has youtubeDataAuthConfig.properties which has
+src/main/resources has 
 
-youtubeDataAuthAPI.CLIENT_ID=
+1 - youtubeDataAuthConfig.properties which has 
 
-youtubeDataAuthAPI.CLIENT_SECRET=
+youtube.youtubeDataAuthAPI.CLIENT_ID=
 
-youtubeDataAuthAPI.REDIRECT_URI=https%3A%2F%2Flocalhost%3A8443%2Foauth2callback
+youtube.youtubeDataAuthAPI.CLIENT_SECRET=
 
-youtubeDataAuthAPI.REDIRECT_URI_FOR_ACCESS_TOKEN=https://localhost:8443/oauth2callback
+2 - redirectConfig.properties
+
+youtube.redirect.REDIRECT_URI=https%3A%2F%2Flocalhost%3A8443%2Foauth2callback
+
+youtube.redirect.REDIRECT_URI_FOR_ACCESS_TOKEN=https://localhost:8443/oauth2callback
+
+3 - refreshToken.properties
+
+youtube.refresh.REFRESH_TOKEN=
 
 Note: I have put the example of REDIRECT_URI and REDIRECT_URI_FOR_ACCESS_TOKEN above, you can follow that and don't forget to add Redirect URI's in the app console. (This is Important).
 
