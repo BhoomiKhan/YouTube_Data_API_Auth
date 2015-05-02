@@ -8,7 +8,7 @@ public class ChannelsClass {
 	private String etag;
 	private String nextPageToken;
 	private String prevPageToken;
-	private pageInfoClass pageInfo;
+	private PageInfoClass pageInfo;
 	private List<ItemsClass> items;
 	public String getKind() {
 		return kind;
@@ -34,10 +34,10 @@ public class ChannelsClass {
 	public void setPrevPageToken(String prevPageToken) {
 		this.prevPageToken = prevPageToken;
 	}
-	public pageInfoClass getPageInfo() {
+	public PageInfoClass getPageInfo() {
 		return pageInfo;
 	}
-	public void setPageInfo(pageInfoClass pageInfo) {
+	public void setPageInfo(PageInfoClass pageInfo) {
 		this.pageInfo = pageInfo;
 	}
 	public List<ItemsClass> getItems() {

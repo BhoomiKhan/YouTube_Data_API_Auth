@@ -1,6 +1,6 @@
 package com.nishanth.youtube.channels;
 
-public class pageInfoClass {
+public class PageInfoClass {
 	
 	private String totalResults;
 	private String resultsPerPage;
